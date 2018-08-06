@@ -1,4 +1,10 @@
-if [ -d $1 ]; then
+#判断参数是否存在
+if [ ! $1 ]; then     
+	echo 'param is missing'
+	exit
+fi
+#判断目录是否已经存在
+if [ -d $1 ]; then    
   echo 'error: dir exists'
   exit
 else
