@@ -1,18 +1,18 @@
 var fs = require('fs')
-var dirname = process.argv[2]
+var dirName = process.argv[2]
 //判断参数是否存在
-if(typeof(dirname) == 'undefined'){
+if(typeof(dirName) == 'undefined'){
 	console.log('param is missing')
 	process.exit(0)
 }
 //判断文件夹是否已经存在
-fs.exists('./'+dirname , function(exists){
+fs.exists('./'+dirName , function(exists){
 	if(exists){
-		console.log(dirname + 'dir exists')
+		console.log(dirName + 'dir exists')
 	}else{
-		fs.mkdirSync('./'+dirname)
+		fs.mkdirSync('./'+dirName)
 
-		process.chdir('./'+dirname)
+		process.chdir('./'+dirName)
 
 		fs.mkdirSync('css')
 		fs.mkdirSync('js')
