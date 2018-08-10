@@ -17,7 +17,7 @@ var server = http.createServer(function(request, response){
   var queryObject = parsedUrl.query
   var method = request.method
 
-  /**********************************************/
+  /******** 从这里开始看，上面不要看 ************/
 
   console.log('HTTP 路径为\n' + path)
   if(path == '/style'){
@@ -42,8 +42,8 @@ var server = http.createServer(function(request, response){
     response.end()
   }
 
-  /*********************************************/
+  /******** 代码结束，下面不要看 ************/
 })
 
 server.listen(port)
-console.log('监听 ' + port + ' 成功\n打开 http://localhost:' + port)
+console.log('监听 ' + port + ' 成功\n请打开 http://localhost:' + port)
